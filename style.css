@@ -1,0 +1,227 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    transition: 0.3s ease;
+    color: #1f2937;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(180deg, #111827, #1f2937);
+    color: white;
+    padding-top: 30px;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.08);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 25px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+    color: white;
+    padding-left: 30px;
+}
+
+/* CONTEÚDO */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* BOTÕES */
+.btn {
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background: #111827;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #000;
+}
+
+/* TABELAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.04);
+}
+
+th {
+    background: #111827;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 500;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* FORMULÁRIOS */
+input, select {
+    width: 100%;
+    padding: 11px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+.dark-mode .sidebar {
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+}
+
+.dark-mode .card,
+.dark-mode table {
+    background-color: #1e293b;
+    color: white;
+}
+
+.dark-mode th {
+    background: #0f172a;
+}
+
+.dark-mode tr:hover {
+    background: #334155;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background-color: #334155;
+    border: 1px solid #475569;
+    color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

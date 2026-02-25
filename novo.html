@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Novo Agendamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Barbearia Pro</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/novo">Novo Agendamento</a>
+    <a href="/clientes">Clientes</a>
+    <a href="/servicos">Serviços</a>
+    <a href="/logout">Sair</a>
+</div>
+
+<div class="content">
+    <h1>Novo Agendamento</h1>
+
+    <div class="card">
+        <form method="POST">
+            <label>Cliente</label>
+            <select name="cliente" required>
+                {% for c in clientes %}
+                <option value="{{ c.id }}">{{ c.nome }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Serviço</label>
+            <select name="servico" required>
+                {% for s in servicos %}
+                <option value="{{ s.id }}">{{ s.nome }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="date" name="data" required>
+            <input type="time" name="horario" required>
+
+            <button class="btn btn-primary">Agendar</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

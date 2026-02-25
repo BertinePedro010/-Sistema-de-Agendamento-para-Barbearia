@@ -1,0 +1,14 @@
+<h2>Agendamentos</h2>
+
+{% for ag in agendamentos %}
+<div class="agendamento-item">
+    <strong>{{ ag[3] }} - {{ ag[4] }}</strong><br>
+    Cliente: {{ ag[1] }}<br>
+    Serviço: {{ ag[5] }}<br><br>
+
+    <a href="/editar/{{ ag[0] }}" class="btn-editar">Editar</a>
+    <a href="/excluir/{{ ag[0] }}" class="btn-excluir">Excluir</a>
+</div>
+{% endfor %}
+
+<a href="/logout" class="btn-logout">Sair</a>
